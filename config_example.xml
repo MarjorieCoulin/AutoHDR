@@ -1,0 +1,7 @@
+<!DOCTYPE XML>
+<autohdr_config>
+  <camera key_iso="iso" key_ap="aperture" key_exp="shutterspeed" />
+  <analysis white_threshold="254" black_threshold="5" ev_gap="2" ev_exp="3" />
+  <capture folder="/home/" />
+  <composition folder="/home/" />
+</autohdr_config>
