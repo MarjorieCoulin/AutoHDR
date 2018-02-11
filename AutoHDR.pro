@@ -63,3 +63,6 @@ FORMS += \
     autohdr_compose.ui
 
 LIBS += -lgphoto2 -lgphoto2_port
+
+RESOURCES += \
+    resources.qrc
