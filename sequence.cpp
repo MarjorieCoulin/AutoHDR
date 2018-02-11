@@ -25,7 +25,7 @@ Sequence::Sequence(RemoteCamera *cam, Config *conf, QWidget *parent)
     c = cam;
     config = conf;
     state = CS_IDLE;
-    comp = new Composition(this);
+    comp = new Composition(this, conf);
 
     /* Link with compute window */
     connect(&computeSequenceDialog,
