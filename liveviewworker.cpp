@@ -24,7 +24,7 @@ void LiveViewWorker::captureLiveView()
         if (c->captureLiveView() < 0)
             break;
 
-        liveView = QImage("liveview.jpg");
+        liveView = QImage("/tmp/liveview.jpg");
         emit imageReady(&liveView);
     }
 }

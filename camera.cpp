@@ -287,7 +287,7 @@ out:
  *
  * Photo preview is a smaller picture associated to
  * the camera live view.
- * Preview is saved to liveview.jpg at executable level.
+ * Preview is saved to /tmp/liveview.jpg
  * It is then read by the liveViewWorker thread.
  */
 int RemoteCamera::captureLiveView()
@@ -297,7 +297,7 @@ int RemoteCamera::captureLiveView()
     int ret;
 
     /* Create file */
-    fd = open("liveview.jpg", O_CREAT | O_WRONLY, 0644);
+    fd = open("/tmp/liveview.jpg", O_CREAT | O_WRONLY, 0644);
     ret = gp_file_new_from_fd(&file, fd);
     if (ret != GP_OK) {
         fprintf(stderr, "gp_file_new_from_fd failed\n");
