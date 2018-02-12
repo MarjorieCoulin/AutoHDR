@@ -20,9 +20,9 @@ class Config : public QWidget
     void saveSequence(QString sequencePath, Sequence *s);
 
     /* Getters */
-    const char *getISOKey();
-    const char *getApertureKey();
-    const char *getExposureKey();
+    QString getISOKey();
+    QString getApertureKey();
+    QString getExposureKey();
     QString getCaptureFolder();
     unsigned char getWhiteThreshold();
     unsigned char getBlackThreshold();

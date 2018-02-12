@@ -206,23 +206,23 @@ void Config::saveSequence(QString sequencePath, Sequence *s)
 
 /*! \brief Get ISO camera dictionnary key
  */
-const char *Config::getISOKey()
+QString Config::getISOKey()
 {
-    return gpConfig.ISO.toStdString().c_str();
+    return gpConfig.ISO;
 }
 
 /*! \brief Get aperture camera dictionnary key
  */
-const char *Config::getApertureKey()
+QString Config::getApertureKey()
 {
-    return gpConfig.aperture.toStdString().c_str();
+    return gpConfig.aperture;
 }
 
 /*! \brief Get exposure camera dictionnary key
  */
-const char *Config::getExposureKey()
+QString Config::getExposureKey()
 {
-    return gpConfig.exposure.toStdString().c_str();
+    return gpConfig.exposure;
 }
 
 /*! \brief Get capture folder

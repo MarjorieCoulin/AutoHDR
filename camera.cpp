@@ -130,11 +130,12 @@ int RemoteCamera::getCurrentCameraParam(CameraWidget *config,
  * Get a list of values from a camera config designated by its
  * entry in a dictionnary
  */
-int RemoteCamera::getCameraConfig(CameraWidget **config, const char *configStr,
+int RemoteCamera::getCameraConfig(CameraWidget **config, QString configStr_,
                                   QStringList &capabilities)
 {
     int ret, choiceCnt;
     CameraWidgetType type;
+    const char *configStr = configStr_.toStdString().c_str();
 
     /* Find config widget */
     ret = gp_widget_get_child_by_name(cameraConfig.root, configStr, config);

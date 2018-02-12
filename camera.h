@@ -77,7 +77,7 @@ class RemoteCamera : public QObject
     } currentParams;
     QString maxExposure;
 
-    int getCameraConfig(CameraWidget **config, const char *configStr,
+    int getCameraConfig(CameraWidget **config, QString configStr,
                         QStringList &capabilities);
     int getCurrentCameraParam(CameraWidget *config, QString &currentParam);
     int setCurrentCameraParam(CameraWidget *config, const char *configStr,
